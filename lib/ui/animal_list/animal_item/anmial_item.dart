@@ -11,6 +11,7 @@ class AnimalItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(animal.imageUrl);
     return GestureDetector(
       onTap: () {
         Navigator.push(
@@ -23,7 +24,7 @@ class AnimalItem extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Row(
             children: [
-              CardItemImage(image:animal.imageUrl), //pasar como parametro la img
+              CardItemImage(image:"https://huachitos.cl/storage/animal-images/cachorro-img-20250321-wa0023-1742696965.jpg"),
 
               const SizedBox(width: 18), // Espacio entre columnas
 
@@ -31,7 +32,8 @@ class AnimalItem extends StatelessWidget {
                   name: animal.name,
                   gender: animal.gender,
                   age: animal.age,
-                  location: animal.location),
+                  location: animal.location
+                  ),
             ],
           ),
         ),

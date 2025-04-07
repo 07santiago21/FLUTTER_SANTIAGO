@@ -10,21 +10,24 @@ import 'package:flutter_santiago/ui/widgets/header.dart';
 class Details extends StatelessWidget {
   final Animal animal;
   const Details({super.key,required this.animal});
+  
 
   @override
   Widget build(BuildContext context) {
-  
+  print(animal.imageUrl);
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: ListView(
+          
           children: [
             Header(),
 
             DetailsName(name: animal.name),
+           
 
-            DetailsImage(imageUrl: animal.imageUrl),
+            DetailsImage(imageUrl:"https://media.istockphoto.com/id/1005374612/es/vector/logotipo-de-icono-del-pata-de-perro.jpg?s=612x612&w=0&k=20&c=Tvc9Ur17w0PDaU0ZX-AfI46dtS2ZAndzVkhjfbY9xkA=" /*animal.imageUrl*/),
+
 
             //const SizedBox(height: 12),
 
@@ -32,7 +35,7 @@ class Details extends StatelessWidget {
 
             DetailsInfo(age: animal.age, genere: animal.gender, location:animal.location),
 
-            DetailsDescription(description:animal.description),
+            DetailsDescription(description:animal.description),  
 
             const Spacer(), // el espacio restante lo rellena
 

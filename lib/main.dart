@@ -3,6 +3,7 @@ import 'package:flutter_santiago/data/service/animal_service.dart';
 import 'package:flutter_santiago/ui/animal_list/animal_list.dart';
 import 'package:flutter_santiago/ui/details/details.dart';
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 

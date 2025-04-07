@@ -20,7 +20,7 @@ class Animal {
     return Animal(
         id: jsonMap["id"],
         name: jsonMap["nombre"],
-        imageUrl: "https://huachitos.cl/storage/animal-images/cachorro-img-20250321-wa0023-1742696965.jpg",//jsonMap["imagen"],
+        imageUrl:jsonMap["imagen"],
         gender: jsonMap["genero"],
         age: jsonMap["edad"],
         location: jsonMap["region"],
