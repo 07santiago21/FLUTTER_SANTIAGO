@@ -1,9 +1,10 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_santiago/ui/animal_list/animal_list.dart';
 import 'package:flutter_santiago/ui/widgets/header.dart';
 
 class AdoptionForm extends StatefulWidget {
-  const AdoptionForm({super.key});
+  AdoptionForm({super.key});
 
   @override
   State<AdoptionForm> createState() => _AdoptionFormState();
@@ -21,6 +22,7 @@ class _AdoptionFormState extends State<AdoptionForm> {
       builder: (_) => AlertDialog(
         title: const Text('Mensaje enviado'),
         content: Text(
+          'gracias por estar interesado en adoptar, nos comunicaremos contigo\n'
           'Nombre: $_name\n'
           'Contacto: $_contact\n'
           'Ubicación: $_location\n'
